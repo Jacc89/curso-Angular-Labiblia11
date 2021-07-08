@@ -1,0 +1,38 @@
+<div class="wrapper">
+  <!-- <div class="col-4"></div> -->
+  <div class="col-12">
+ <button (click)="onClickUpdate()" >Actualizar </button>
+ <button (click)="onClickdelete()" >eliminar </button>
+ <br>
+ <br>
+<div>
+ <!--  <button (click)="onClickPost()" >Petición Post</button>; -->
+ <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+   <div>
+     <label for="">Titulo:</label>
+     <input type="text" formControlName="title">
+   </div>
+   <div>
+    <label for="">Cuerpo:</label>
+    <input type="text" formControlName="body">
+  </div>
+  <div>
+    <label for="">User Id:</label>
+    <input type="text" formControlName="userId">
+  </div>
+  <br>
+  <input type="submit" value="Enviar" >
+
+ </form>
+</div>
+<br>
+<div class="posts">
+  <div class="post" *ngFor="let post of arrPosts" (click)="onClick(post.id)" >
+    <h4>Titulo: {{post.title}}</h4>
+    <p>Body: {{post.body}}</p>
+    <p>UserId: {{post.userId}}</p>
+  </div>
+</div>
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="menu p-2">
+    <button class="btn btn-primary mr-2" [routerLink]="['/new']">Formulario</button>
+    <button class="btn btn-primary" [routerLink]="['/lista']">Lista de empleados</button>
+  </div>
+  <div class="col-4"></div>
+  <div class="col-5">
+<h1>Formulario registro</h1>
+<form [formGroup]="formNewEmpleado" (ngSubmit)="onSubmit()" >
+ <div class="container">
+   <div class="row">
+     <div class="col-12">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control" >
+        <span *ngIf="formNewEmpleado.controls.nombre.errors && formNewEmpleado.controls.nombre.touched" class="error">El campo es requerido</span>
+    </div>
+    <div class="form-group">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" formControlName="apellidos" class="form-control" >
+        <span *ngIf="formNewEmpleado.controls.apellidos.errors && formNewEmpleado.controls.apellidos.touched" class="error">El campo es requerido</span>
+
+    </div>
+
+    <div class="form-group">
+        <label for="edad">Edad</label>
+        <input type="text" formControlName="edad" class="form-control" >
+    </div>
+
+    <div class="form-group">
+      <label for="imagen">Imagen</label>
+      <input type="text" formControlName="imagen" class="form-control" >
+
+  </div>
+
+    <div class="form-group">
+        <label for="departamento">Departamento</label>
+        <select formControlName="departamento" class="form-control" >
+          <option value="informatica">Informatica</option>
+          <option value="marketing">Marketing</option>
+          <option value="contabilidad">contabilidad</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" formControlName="email" class="form-control" >
+      <span *ngIf="formNewEmpleado.controls.email.errors && formNewEmpleado.controls.email.touched" class="error">El campo es requerido</span>
+
+  </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" >
+    </div>
+
+  <button type="submit" class="btn  btn-block btn-success" [disabled]="!formNewEmpleado.valid" > Enviar</button>
+
+     </div>
+   </div>
+ </div>
+  </form>
+  </div>
+</div>

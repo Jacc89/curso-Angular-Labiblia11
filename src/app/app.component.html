@@ -1,0 +1,115 @@
+<!-- elercicio formularios; -->
+<!-- <app-formulario></app-formulario> -->
+
+<!-- ejercicio http -->
+<!-- <app-http></app-http> -->
+
+<!-- ejercicio banderas -->
+<!-- <app-paises></app-paises> -->
+
+<!-- ejercicio rick y morty -->
+<!-- <app-rickymorty></app-rickymorty> -->
+
+<!-- ejercicio de pipe -->
+<!-- <app-pipe></app-pipe> -->
+
+<!-- animaciones -->
+<!-- <app-animation></app-animation> -->
+ <header class="nav-down responsive-nav hidden-lg hidden-md">
+  <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+  </button>
+  <!--/.navbar-header-->
+  <div id="main-nav" class="collapse navbar-collapse">
+      <nav>
+          <ul class="nav navbar-nav">
+            <li><a routerLink="ricky">Rycky</a></li>
+            <li><a routerLink="formulario">Formulario</a></li>
+            <li><a routerLink="animacion">Animacion</a></li>
+            <li><a routerLink="pipe">Pipe</a></li>
+            <li><a routerLink="paises">Paises</a></li>
+            <li><a routerLink="http">Http</a></li>
+            <li><a routerLink="model">Model</a></li>
+            <li><a routerLink="template">Template</a></li>
+          </ul>
+      </nav>
+  </div>
+</header>
+
+<div class="sidebar-navigation hidde-sm hidden-xs">
+  <div class="logo">
+      <a href="#">proyectos</a>
+  </div>
+
+  <nav>
+      <ul>
+            <li>
+              <a routerLink="ricky">
+                  <span class="rect"></span>
+                  <span class="circle"></span>
+                  Rycky
+              </a>
+            </li>
+
+            <li>
+              <a routerLink="formulario">
+                  <span class="rect"></span>
+                  <span class="circle"></span>
+                  Formulario
+              </a>
+            </li>
+           <li>
+              <a routerLink="animacion">
+                  <span class="rect"></span>
+                  <span class="circle"></span>
+                  Animacion
+              </a>
+           </li>
+           <li>
+            <a routerLink="pipe">
+                  <span class="rect"></span>
+                  <span class="circle"></span>
+                  Pipe
+              </a>
+           </li>
+           <li>
+            <a routerLink="paises">
+                  <span class="rect"></span>
+                  <span class="circle"></span>
+                 Paises
+              </a>
+           </li>
+           <li>
+            <a routerLink="http">
+              <span class="rect"></span>
+              <span class="circle"></span>
+              Http
+            </a>
+           </li>
+           <li>
+             <a routerLink="model">
+                <span class="rect"></span>
+                <span class="circle"></span>
+                Model
+              </a>
+            </li>
+            <li>
+              <a routerLink="template">
+                <span class="rect"></span>
+                <span class="circle"></span>
+                Template
+              </a
+            ></li>
+      </ul>
+  </nav>
+
+</div>
+
+<div class="page-content">
+    <router-outlet></router-outlet>
+</div>
+
+

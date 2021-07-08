@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="menu p-2">
+    <button class="btn btn-primary mr-2" [routerLink]="['/new']">Formulario</button>
+    <button class="btn btn-primary" [routerLink]="['/lista']">Lista de empleados</button>
+  </div>
+  <div class="col-4"></div>
+  <div class="col-5">
+
+<div class="empleados">
+  <div class="empleado" *ngFor="let empleado of empleados">
+    <h4>{{empleado.nombre}}--{{empleado.apellidos}}</h4>
+    <img [src]="empleado.imagen">
+    <ul>
+      <li>{{empleado.email}}</li>
+      <li>{{empleado.password}}</li>
+      <li>{{empleado.edad}}</li>
+    </ul>
+  </div>
+</div>
+  </div>
+</div>
+

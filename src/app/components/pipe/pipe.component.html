@@ -1,0 +1,47 @@
+customPipe
+
+<p>texto: {{texto | reverso}}</p>
+
+<p>{{texto | capitalize}} </p>
+
+<ul>
+  <h3> no esta iterando como deberia</h3>
+ 
+  <li *ngFor="let number of 2 | numarray">
+    {{number}} </li>
+</ul>
+_________________________________________
+<!-- <p>
+  Precio:{{precio |currency: 'EUR':'symbol':'1.1-1'}}
+</p>
+
+<p>numero: {{numero | number:'1.2-4'}}</p>
+
+<p>Fecha: {{fecha | date:'dd-LLLL-yyyy HH:mm.ss'}}</p>
+<p>Num Aleatorio:{{numAleatorio | percent }}</p>
+
+<p>Estudiante: {{estudiante | json}}</p>
+
+
+<p>Texto may: {{texto | uppercase}} <br>
+  Texto mins: {{texto | lowercase}} <br>
+  Texto 1ra may: {{texto | titlecase}}
+</p>
+
+<ul>
+  <li *ngFor="let animal of animales | slice:minimo:maximo">{{ animal }}</li>
+</ul>
+
+<input type="range" min="0" [max]="animales.length-1" step="1" [(ngModel)]="minimo"> {{minimo}}
+<input type="range" min="0" [max]="animales.length-1" step="1" [(ngModel)]="maximo">{{maximo}}
+
+<p>mensaje: {{prom | async}}</p>
+
+{{promPost | async }}
+
+<ul>
+  <li *ngFor="let post of promPost | async">
+    {{post.title}}
+  </li>
+</ul>
+ -->
